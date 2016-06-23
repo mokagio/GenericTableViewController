@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F0340CF1D1BC0AF002C34BB /* GenericTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */; };
+		3F0340CF1D1BC0AF002C34BB /* GenericTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F0340DF1D1BC23A002C34BB /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340DE1D1BC23A002C34BB /* DummyTests.swift */; };
 		3F0340E11D1BC23A002C34BB /* GenericTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; };
 		3F0340E81D1BE748002C34BB /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340E71D1BE748002C34BB /* CellConfiguration.swift */; };

@@ -20,6 +20,8 @@
 		3F0340FF1D1C7A07002C34BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0340FD1D1C7A07002C34BB /* Main.storyboard */; };
 		3F0341011D1C7A07002C34BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0341001D1C7A07002C34BB /* Assets.xcassets */; };
 		3F0341041D1C7A07002C34BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0341021D1C7A07002C34BB /* LaunchScreen.storyboard */; };
+		3F0341091D1C7C4C002C34BB /* GenericTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; };
+		3F03410A1D1C7C4C002C34BB /* GenericTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,28 @@
 			remoteGlobalIDString = 3F0340B31D1BC056002C34BB;
 			remoteInfo = GenericTableViewController;
 		};
+		3F03410B1D1C7C4C002C34BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F0340A91D1BBDFE002C34BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F0340B31D1BC056002C34BB;
+			remoteInfo = GenericTableViewController;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F03410D1D1C7C4C002C34BB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F03410A1D1C7C4C002C34BB /* GenericTableViewController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GenericTableViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0341091D1C7C4C002C34BB /* GenericTableViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,10 +218,12 @@
 				3F0340F31D1C7A07002C34BB /* Sources */,
 				3F0340F41D1C7A07002C34BB /* Frameworks */,
 				3F0340F51D1C7A07002C34BB /* Resources */,
+				3F03410D1D1C7C4C002C34BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3F03410C1D1C7C4C002C34BB /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -308,6 +334,11 @@
 			isa = PBXTargetDependency;
 			target = 3F0340B31D1BC056002C34BB /* GenericTableViewController */;
 			targetProxy = 3F0340E21D1BC23A002C34BB /* PBXContainerItemProxy */;
+		};
+		3F03410C1D1C7C4C002C34BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F0340B31D1BC056002C34BB /* GenericTableViewController */;
+			targetProxy = 3F03410B1D1C7C4C002C34BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -567,6 +598,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -618,6 +650,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

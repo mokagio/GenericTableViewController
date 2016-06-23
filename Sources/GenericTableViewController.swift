@@ -1,10 +1,10 @@
 import UIKit
 
-class GenericTableViewController: UIViewController {
+public class GenericTableViewController: UIViewController {
 
-  let tableView = UITableView()
+  public let tableView = UITableView()
 
-  var tableViewConfigurator: TableViewConfiguration<Any>? {
+  public var tableViewConfigurator: TableViewConfiguration<Any>? {
     didSet {
       tableViewConfigurator?.cellsConfigurations.forEach { info in
         tableView.registerClass(info.cellClass, forCellReuseIdentifier: info.identifier)
@@ -12,7 +12,7 @@ class GenericTableViewController: UIViewController {
     }
   }
 
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
 
     tableView.dataSource = self

@@ -1,17 +1,17 @@
 import UIKit
 
-struct CellConfiguration<T> {
+public struct CellConfiguration<T> {
 
-  let identifier: String
+  public let identifier: String
 
   // It's called cellClass because class is restricted
-  let cellClass: AnyClass
+  public let cellClass: AnyClass
 
-  let configurator: (T, UITableViewCell) -> UITableViewCell
+  public let configurator: (T, UITableViewCell) -> UITableViewCell
 
-  let selectionHandler: (T -> ())?
+  public let selectionHandler: (T -> ())?
 
-  init(identifier: String,
+  public init(identifier: String,
        cellClass: AnyClass = UITableViewCell.self,
        configurator: (T, UITableViewCell) -> UITableViewCell,
        handler: (T -> ())? = .None

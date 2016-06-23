@@ -1,10 +1,10 @@
 import UIKit
 
-struct TableViewConfiguration<T> {
+public struct TableViewConfiguration<T> {
 
-  let data: [T]
+  public let data: [T]
 
-  let cellsConfigurations: [CellConfiguration<T>]
+  public let cellsConfigurations: [CellConfiguration<T>]
 
-  let identifierForIndex: Int -> String
+  public let identifierForIndex: Int -> String
 }

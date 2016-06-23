@@ -2,7 +2,7 @@ import UIKit
 
 extension GenericTableViewController: UITableViewDelegate {
 
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure("Attempted to interact with the table view without providing a configurator")
     }

@@ -2,11 +2,11 @@ import UIKit
 
 extension GenericTableViewController: UITableViewDataSource {
 
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
 
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure("Attempted to load the table view without providing a configurator")
     }
@@ -14,7 +14,7 @@ extension GenericTableViewController: UITableViewDataSource {
     return configurator.data.count
   }
 
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure("Attempted to load the table view without providing a configurator")
     }

@@ -15,6 +15,7 @@
 		3F0340EC1D1BEABB002C34BB /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */; };
 		3F0340EE1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */; };
 		3F0340F01D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340EF1D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift */; };
+		3F0340F21D1C779C002C34BB /* GenericTableViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340F11D1C779C002C34BB /* GenericTableViewController+Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		3F0340EF1D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+EqualConstraint.swift"; sourceTree = "<group>"; };
+		3F0340F11D1C779C002C34BB /* GenericTableViewController+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericTableViewController+Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				3F0340E71D1BE748002C34BB /* CellConfiguration.swift */,
 				3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */,
 				3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */,
+				3F0340F11D1C779C002C34BB /* GenericTableViewController+Delegate.swift */,
 				3F0340EF1D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift */,
 			);
 			path = Sources;
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0340F21D1C779C002C34BB /* GenericTableViewController+Delegate.swift in Sources */,
 				3F0340F01D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift in Sources */,
 				3F0340EE1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift in Sources */,
 				3F0340EA1D1BE960002C34BB /* TableViewConfiguration.swift in Sources */,

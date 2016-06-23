@@ -57,7 +57,9 @@
 				3F0340DD1D1BC23A002C34BB /* Tests */,
 				3F0340B51D1BC056002C34BB /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		3F0340B51D1BC056002C34BB /* Products */ = {
 			isa = PBXGroup;
@@ -448,6 +450,7 @@
 				3F0340C71D1BC056002C34BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F0340E41D1BC23A002C34BB /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +459,7 @@
 				3F0340E61D1BC23A002C34BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

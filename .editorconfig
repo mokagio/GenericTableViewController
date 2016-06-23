@@ -1,0 +1,6 @@
+# IDE agnostic configurations
+# http://editorconfig.org/
+#
+[*.{swift,h,m}]
+indent_style = space
+indent_size = 2

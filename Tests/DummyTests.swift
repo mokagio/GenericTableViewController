@@ -2,7 +2,7 @@ import XCTest
 
 class Tests: XCTestCase {
 
-    func testDummy() {
-        XCTAssertTrue(false)
-    }
+  func testDummy() {
+    XCTAssertTrue(false)
+  }
 }

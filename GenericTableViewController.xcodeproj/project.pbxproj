@@ -22,6 +22,8 @@
 		3F0341041D1C7A07002C34BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0341021D1C7A07002C34BB /* LaunchScreen.storyboard */; };
 		3F0341091D1C7C4C002C34BB /* GenericTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; };
 		3F03410A1D1C7C4C002C34BB /* GenericTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F03410F1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */; };
+		3F0341111D1D2950002C34BB /* CellConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0341101D1D2950002C34BB /* CellConfiguration+Boxed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		3F0341001D1C7A07002C34BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0341031D1C7A07002C34BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F0341051D1C7A07002C34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableViewConfiguration+Boxed.swift"; sourceTree = "<group>"; };
+		3F0341101D1D2950002C34BB /* CellConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CellConfiguration+Boxed.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,9 @@
 				3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */,
 				3F0340CE1D1BC0AF002C34BB /* Info.plist */,
 				3F0340E71D1BE748002C34BB /* CellConfiguration.swift */,
+				3F0341101D1D2950002C34BB /* CellConfiguration+Boxed.swift */,
 				3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */,
+				3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */,
 				3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */,
 				3F0340F11D1C779C002C34BB /* GenericTableViewController+Delegate.swift */,
 				3F0340EF1D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift */,
@@ -307,6 +313,8 @@
 				3F0340EE1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift in Sources */,
 				3F0340EA1D1BE960002C34BB /* TableViewConfiguration.swift in Sources */,
 				3F0340EC1D1BEABB002C34BB /* GenericTableViewController.swift in Sources */,
+				3F0341111D1D2950002C34BB /* CellConfiguration+Boxed.swift in Sources */,
+				3F03410F1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift in Sources */,
 				3F0340E81D1BE748002C34BB /* CellConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

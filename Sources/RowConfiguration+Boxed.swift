@@ -1,7 +1,7 @@
-extension CellConfiguration {
+extension RowConfiguration {
 
-  public func boxedToAny() -> CellConfiguration<Any> {
-    return CellConfiguration<Any>(
+  public func boxedToAny() -> RowConfiguration<Any> {
+    return RowConfiguration<Any>(
       identifier: identifier,
       cellClass: cellClass,
       configurator: { anyValue, cell in

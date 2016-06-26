@@ -10,7 +10,7 @@
 		3F0340CF1D1BC0AF002C34BB /* GenericTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F0340DF1D1BC23A002C34BB /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340DE1D1BC23A002C34BB /* DummyTests.swift */; };
 		3F0340E11D1BC23A002C34BB /* GenericTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; };
-		3F0340E81D1BE748002C34BB /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340E71D1BE748002C34BB /* CellConfiguration.swift */; };
+		3F0340E81D1BE748002C34BB /* RowConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340E71D1BE748002C34BB /* RowConfiguration.swift */; };
 		3F0340EA1D1BE960002C34BB /* TableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */; };
 		3F0340EC1D1BEABB002C34BB /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */; };
 		3F0340EE1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */; };
@@ -23,7 +23,7 @@
 		3F0341091D1C7C4C002C34BB /* GenericTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; };
 		3F03410A1D1C7C4C002C34BB /* GenericTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F03410F1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */; };
-		3F0341111D1D2950002C34BB /* CellConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0341101D1D2950002C34BB /* CellConfiguration+Boxed.swift */; };
+		3F0341111D1D2950002C34BB /* RowConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 		3F0340DC1D1BC23A002C34BB /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0340DE1D1BC23A002C34BB /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
 		3F0340E01D1BC23A002C34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F0340E71D1BE748002C34BB /* CellConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
+		3F0340E71D1BE748002C34BB /* RowConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfiguration.swift; sourceTree = "<group>"; };
 		3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewConfiguration.swift; sourceTree = "<group>"; };
 		3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GenericTableViewController+DataSource.swift"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		3F0341031D1C7A07002C34BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F0341051D1C7A07002C34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableViewConfiguration+Boxed.swift"; sourceTree = "<group>"; };
-		3F0341101D1D2950002C34BB /* CellConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CellConfiguration+Boxed.swift"; sourceTree = "<group>"; };
+		3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RowConfiguration+Boxed.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +135,8 @@
 				3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */,
 				3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */,
 				3F0340CE1D1BC0AF002C34BB /* Info.plist */,
-				3F0340E71D1BE748002C34BB /* CellConfiguration.swift */,
-				3F0341101D1D2950002C34BB /* CellConfiguration+Boxed.swift */,
+				3F0340E71D1BE748002C34BB /* RowConfiguration.swift */,
+				3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */,
 				3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */,
 				3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */,
 				3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */,
@@ -313,9 +313,9 @@
 				3F0340EE1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift in Sources */,
 				3F0340EA1D1BE960002C34BB /* TableViewConfiguration.swift in Sources */,
 				3F0340EC1D1BEABB002C34BB /* GenericTableViewController.swift in Sources */,
-				3F0341111D1D2950002C34BB /* CellConfiguration+Boxed.swift in Sources */,
+				3F0341111D1D2950002C34BB /* RowConfiguration+Boxed.swift in Sources */,
 				3F03410F1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift in Sources */,
-				3F0340E81D1BE748002C34BB /* CellConfiguration.swift in Sources */,
+				3F0340E81D1BE748002C34BB /* RowConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +718,7 @@
 				3F0341081D1C7A07002C34BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,13 +4,13 @@ public struct TableViewConfiguration<T> {
 
   public let data: [T]
 
-  public let cellsConfigurations: [CellConfiguration<T>]
+  public let rowsConfigurations: [RowConfiguration<T>]
 
   public let identifierForIndex: Int -> String
 
-  public init(data: [T], cellsConfigurations: [CellConfiguration<T>], identifierForIndex: Int -> String) {
+  public init(data: [T], rowsConfigurations: [RowConfiguration<T>], identifierForIndex: Int -> String) {
     self.data = data
-    self.cellsConfigurations = cellsConfigurations
+    self.rowsConfigurations = rowsConfigurations
     self.identifierForIndex = identifierForIndex
   }
 }

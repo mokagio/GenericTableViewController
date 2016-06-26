@@ -6,7 +6,7 @@ public class GenericTableViewController: UIViewController {
 
   public var tableViewConfigurator: TableViewConfiguration<Any>? {
     didSet {
-      tableViewConfigurator?.cellsConfigurations.forEach { info in
+      tableViewConfigurator?.rowsConfigurations.forEach { info in
         tableView.registerClass(info.cellClass, forCellReuseIdentifier: info.identifier)
       }
     }

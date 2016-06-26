@@ -9,7 +9,7 @@ extension GenericTableViewController: UITableViewDelegate {
 
     let identifier = configurator.identifierForIndex(indexPath.row)
 
-    guard let handler = configurator.cellsConfigurations
+    guard let handler = configurator.rowsConfigurations
       .filter({ $0.identifier == identifier })
       .first?
       .selectionHandler else {

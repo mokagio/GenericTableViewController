@@ -23,7 +23,7 @@ extension GenericTableViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
     let value = configurator.data[indexPath.row]
 
-    if let configurator = configurator.cellsConfigurations.filter({ $0.identifier == identifier })
+    if let configurator = configurator.rowsConfigurations.filter({ $0.identifier == identifier })
       .first?
       .configurator {
       return configurator(value, cell)

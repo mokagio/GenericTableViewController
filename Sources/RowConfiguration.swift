@@ -1,6 +1,6 @@
 import UIKit
 
-public struct CellConfiguration<T> {
+public struct RowConfiguration<T> {
 
   public let identifier: String
 

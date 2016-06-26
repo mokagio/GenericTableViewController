@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
 
     let data: [String] = source.keys.map { $0 }
-    let cellsConfigurations: [CellConfiguration<String>] = [
-      CellConfiguration<String>(
+    let rowsConfigurations: [RowConfiguration<String>] = [
+      RowConfiguration<String>(
         identifier: "cell",
         cellClass: UITableViewCell.self,
         configurator: { value, cell in
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
     let tableViewConfigurator = TableViewConfiguration<String>(
       data: data,
-      cellsConfigurations: cellsConfigurations,
+      rowsConfigurations: rowsConfigurations,
       identifierForIndex: { _ in return "cell" }
     )
     rootTableViewController.tableViewConfigurator = tableViewConfigurator.boxedToAny()
@@ -53,8 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func numberTableViewController() -> GenericTableViewController {
     let data: [Int] = [1,2,3,4,5]
-    let cellsConfigurations: [CellConfiguration<Int>] = [
-      CellConfiguration<Int>(
+    let rowsConfigurations: [RowConfiguration<Int>] = [
+      RowConfiguration<Int>(
         identifier: "cell",
         cellClass: UITableViewCell.self,
         configurator: { value, cell in
@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
     let tableViewConfigurator = TableViewConfiguration<Int>(
       data: data,
-      cellsConfigurations: cellsConfigurations,
+      rowsConfigurations: rowsConfigurations,
       identifierForIndex: { _ in return "cell" }
     )
 
@@ -74,8 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func stringsTableViewController() -> GenericTableViewController {
     let data: [String] = ["Lorem", "ipsum", "doloret", "..."]
-    let cellsConfigurations: [CellConfiguration<String>] = [
-      CellConfiguration<String>(
+    let rowsConfigurations: [RowConfiguration<String>] = [
+      RowConfiguration<String>(
         identifier: "cell",
         cellClass: UITableViewCell.self,
         configurator: { value, cell in
@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
     let tableViewConfigurator = TableViewConfiguration<String>(
       data: data,
-      cellsConfigurations: cellsConfigurations,
+      rowsConfigurations: rowsConfigurations,
       identifierForIndex: { _ in return "cell" }
     )
 

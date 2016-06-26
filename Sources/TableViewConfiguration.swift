@@ -13,4 +13,12 @@ public struct TableViewConfiguration<T> {
     self.rowsConfigurations = rowsConfigurations
     self.identifierForIndex = identifierForIndex
   }
+
+  public init(data: [T], rowsConfiguration: RowConfiguration<T>) {
+    self.init(
+      data: data,
+      rowsConfigurations: [rowsConfiguration],
+      identifierForIndex: { _ in return rowsConfiguration.identifier }
+    )
+  }
 }

@@ -53,8 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func numberTableViewController() -> GenericTableViewController {
     let data: [Int] = [1,2,3,4,5]
-    let rowsConfigurations: [RowConfiguration<Int>] = [
-      RowConfiguration<Int>(
+    let rowsConfigurations = RowConfiguration<Int>(
         identifier: "cell",
         cellClass: UITableViewCell.self,
         configurator: { value, cell in
@@ -62,11 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           return cell
         }
       )
-    ]
     let tableViewConfigurator = TableViewConfiguration<Int>(
       data: data,
-      rowsConfigurations: rowsConfigurations,
-      identifierForIndex: { _ in return "cell" }
+      rowsConfiguration: rowsConfigurations
     )
 
     return genericTableViewController(tableViewConfigurator)
@@ -74,20 +71,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func stringsTableViewController() -> GenericTableViewController {
     let data: [String] = ["Lorem", "ipsum", "doloret", "..."]
-    let rowsConfigurations: [RowConfiguration<String>] = [
-      RowConfiguration<String>(
-        identifier: "cell",
-        cellClass: UITableViewCell.self,
-        configurator: { value, cell in
-          cell.textLabel?.text = value
-          return cell
-        }
-      )
-    ]
+    let rowsConfiguration = RowConfiguration<String>(
+      identifier: "cell",
+      cellClass: UITableViewCell.self,
+      configurator: { value, cell in
+        cell.textLabel?.text = value
+        return cell
+      }
+    )
     let tableViewConfigurator = TableViewConfiguration<String>(
       data: data,
-      rowsConfigurations: rowsConfigurations,
-      identifierForIndex: { _ in return "cell" }
+      rowsConfiguration: rowsConfiguration
     )
 
     return genericTableViewController(tableViewConfigurator)

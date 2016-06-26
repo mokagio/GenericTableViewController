@@ -16,6 +16,7 @@ public class GenericTableViewController: UIViewController {
     super.viewDidLoad()
 
     tableView.dataSource = self
+    tableView.delegate = self
 
     tableView.translatesAutoresizingMaskIntoConstraints = false
 

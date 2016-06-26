@@ -132,16 +132,15 @@
 		3F0340CC1D1BC0AF002C34BB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */,
+				3F59BA5F1D20778800F14F5C /* Additional-Files */,
 				3F0340EB1D1BEABB002C34BB /* GenericTableViewController.swift */,
-				3F0340CE1D1BC0AF002C34BB /* Info.plist */,
+				3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */,
+				3F0340F11D1C779C002C34BB /* GenericTableViewController+Delegate.swift */,
+				3F0340EF1D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift */,
 				3F0340E71D1BE748002C34BB /* RowConfiguration.swift */,
 				3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */,
 				3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */,
 				3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */,
-				3F0340ED1D1BEB48002C34BB /* GenericTableViewController+DataSource.swift */,
-				3F0340F11D1C779C002C34BB /* GenericTableViewController+Delegate.swift */,
-				3F0340EF1D1BEC23002C34BB /* NSLayoutConstraint+EqualConstraint.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -165,6 +164,15 @@
 				3F0341051D1C7A07002C34BB /* Info.plist */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		3F59BA5F1D20778800F14F5C /* Additional-Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */,
+				3F0340CE1D1BC0AF002C34BB /* Info.plist */,
+			);
+			name = "Additional-Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

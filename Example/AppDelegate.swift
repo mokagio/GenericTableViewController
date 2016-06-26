@@ -65,8 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
     let tableViewConfigurator = TableViewConfiguration<Int>(
       data: data,
-      rowsConfigurations: rowsConfigurations,
-      identifierForIndex: { _ in return "cell" }
+      rowsConfiguration: rowsConfigurations
     )
 
     return genericTableViewController(tableViewConfigurator)
@@ -86,8 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ]
     let tableViewConfigurator = TableViewConfiguration<String>(
       data: data,
-      rowsConfigurations: rowsConfigurations,
-      identifierForIndex: { _ in return "cell" }
+      rowsConfiguration: rowsConfigurations
     )
 
     return genericTableViewController(tableViewConfigurator)

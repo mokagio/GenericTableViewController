@@ -9,13 +9,13 @@ extension GenericTableViewController: UITableViewDelegate {
 
     let identifier = configurator.identifierForIndex(indexPath.row)
 
-    guard let handler = configurator.rowsConfigurations
+    if let handler = configurator.rowsConfigurations
       .filter({ $0.identifier == identifier })
       .first?
-      .selectionHandler else {
-        return
+      .selectionHandler {
+      handler(configurator.data[indexPath.row])
     }
 
-    handler(configurator.data[indexPath.row])
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
 }

@@ -52,8 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   private func numberTableViewController() -> GenericTableViewController {
-    let data: [Int] = [1,2,3,4,5]
-    let rowsConfigurations = RowConfiguration<Int>(
+    let configuration = TableViewConfiguration<Int>(
+      data: [1,2,3,4,5],
+      rowsConfiguration: RowConfiguration<Int>(
         identifier: "cell",
         cellClass: UITableViewCell.self,
         configurator: { value, cell in
@@ -61,12 +62,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           return cell
         }
       )
-    let tableViewConfigurator = TableViewConfiguration<Int>(
-      data: data,
-      rowsConfiguration: rowsConfigurations
     )
 
-    return genericTableViewController(tableViewConfigurator)
+    let genericTableViewController = GenericTableViewController()
+    // Being an Objective-C class UIViewController doesn't support generics the
+    // way Swift does, so we need to "box" our configuration in <T> into <Any>.
+    genericTableViewController.tableViewConfigurator = configuration.boxedToAny()
+
+    return genericTableViewController
   }
 
   private func stringsTableViewController() -> GenericTableViewController {

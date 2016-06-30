@@ -18,9 +18,14 @@ public class GenericTableViewController: UIViewController {
     tableView.dataSource = self
     tableView.delegate = self
 
-    tableView.translatesAutoresizingMaskIntoConstraints = false
+    addTableViewToView()
+  }
 
+  private func addTableViewToView() {
     view.addSubview(tableView)
+
+    // We disable this because we'll add all the constraints manually
+    tableView.translatesAutoresizingMaskIntoConstraints = false
 
     view.addConstraints(
       [

@@ -8,7 +8,11 @@ public struct TableViewConfiguration<T> {
 
   public let identifierForIndex: Int -> String
 
-  public init(data: [T], rowsConfigurations: [RowConfiguration<T>], identifierForIndex: Int -> String) {
+  public init(
+    data: [T],
+    rowsConfigurations: [RowConfiguration<T>],
+    identifierForIndex: Int -> String
+    ) {
     self.data = data
     self.rowsConfigurations = rowsConfigurations
     self.identifierForIndex = identifierForIndex

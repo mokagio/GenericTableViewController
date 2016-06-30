@@ -14,7 +14,10 @@ extension GenericTableViewController: UITableViewDataSource {
     return configurator.data.count
   }
 
-  public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  public func tableView(
+    tableView: UITableView,
+    cellForRowAtIndexPath indexPath: NSIndexPath
+    ) -> UITableViewCell {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure("Attempted to load the table view without providing a configurator")
     }

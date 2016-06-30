@@ -4,7 +4,9 @@ extension GenericTableViewController: UITableViewDelegate {
 
   public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     guard let configurator = tableViewConfigurator else {
-      preconditionFailure("Attempted to interact with the table view without providing a configurator")
+      preconditionFailure(
+        "Attempted to interact with the table view without providing a configurator"
+      )
     }
 
     let identifier = configurator.identifierForIndex(indexPath.row)

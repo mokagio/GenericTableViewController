@@ -6,7 +6,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  func application(
+    application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
+    ) -> Bool {
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
     let rootTableViewController = GenericTableViewController()
@@ -53,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func numberTableViewController() -> GenericTableViewController {
     let configuration = TableViewConfiguration<Int>(
-      data: [1,2,3,4,5],
+      data: [1, 2, 3, 4, 5],
       rowsConfiguration: RowConfiguration<Int>(
         identifier: "cell",
         cellClass: UITableViewCell.self,
@@ -90,7 +93,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return genericTableViewController(tableViewConfigurator)
   }
 
-  private func genericTableViewController<T>(configuration: TableViewConfiguration<T>) -> GenericTableViewController {
+  private func genericTableViewController<T>(
+    configuration: TableViewConfiguration<T>
+    ) -> GenericTableViewController {
     let genericTableViewController = GenericTableViewController()
     genericTableViewController.tableViewConfigurator = configuration.boxedToAny()
     return genericTableViewController

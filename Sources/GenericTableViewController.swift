@@ -25,9 +25,9 @@ public class GenericTableViewController: UIViewController {
     view.addConstraints(
       [
         NSLayoutConstraint(equalingAttribute: .Top, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .RightMargin, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .BottomMargin, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .LeftMargin, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .Right, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .Bottom, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .Left, ofItem: tableView, toItem: view),
       ]
     )
   }

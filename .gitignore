@@ -41,8 +41,6 @@ xcuserdata
 
 # Carthage
 #
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
-
+# I've decided to keep this repo's git footprint lean and not to track the
+# dependencies installed via Carthage, which are just for testing anyway.
+Carthage

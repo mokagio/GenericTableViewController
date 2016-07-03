@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F0340CF1D1BC0AF002C34BB /* GenericTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F0340DF1D1BC23A002C34BB /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340DE1D1BC23A002C34BB /* DummyTests.swift */; };
+		3F0340DF1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340DE1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift */; };
 		3F0340E11D1BC23A002C34BB /* GenericTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; };
 		3F0340E81D1BE748002C34BB /* RowConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340E71D1BE748002C34BB /* RowConfiguration.swift */; };
 		3F0340EA1D1BE960002C34BB /* TableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */; };
@@ -78,7 +78,7 @@
 		3F0340CD1D1BC0AF002C34BB /* GenericTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericTableViewController.h; sourceTree = "<group>"; };
 		3F0340CE1D1BC0AF002C34BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F0340DC1D1BC23A002C34BB /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F0340DE1D1BC23A002C34BB /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
+		3F0340DE1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewConfigurationSingleInitSpec.swift; sourceTree = "<group>"; };
 		3F0340E01D1BC23A002C34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F0340E71D1BE748002C34BB /* RowConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowConfiguration.swift; sourceTree = "<group>"; };
 		3F0340E91D1BE960002C34BB /* TableViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewConfiguration.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB57F7C1D2996E100A9A64F /* Frameworks */,
-				3F0340DE1D1BC23A002C34BB /* DummyTests.swift */,
+				3F0340DE1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift */,
 				3F0340E01D1BC23A002C34BB /* Info.plist */,
 			);
 			path = Tests;
@@ -381,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F0340DF1D1BC23A002C34BB /* DummyTests.swift in Sources */,
+				3F0340DF1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

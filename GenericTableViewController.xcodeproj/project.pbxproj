@@ -24,6 +24,10 @@
 		3F03410A1D1C7C4C002C34BB /* GenericTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F03410F1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */; };
 		3F0341111D1D2950002C34BB /* RowConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */; };
+		3FB57F7A1D2996D600A9A64F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F781D2996D600A9A64F /* Nimble.framework */; };
+		3FB57F7B1D2996D600A9A64F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F791D2996D600A9A64F /* Quick.framework */; };
+		3FB57F7E1D29999900A9A64F /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F781D2996D600A9A64F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FB57F7F1D29999900A9A64F /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F791D2996D600A9A64F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,18 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FB57F7D1D29998600A9A64F /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FB57F7E1D29999900A9A64F /* Nimble.framework in Copy Frameworks */,
+				3FB57F7F1D29999900A9A64F /* Quick.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +94,8 @@
 		3F0341051D1C7A07002C34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableViewConfiguration+Boxed.swift"; sourceTree = "<group>"; };
 		3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RowConfiguration+Boxed.swift"; sourceTree = "<group>"; };
+		3FB57F781D2996D600A9A64F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		3FB57F791D2996D600A9A64F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB57F7A1D2996D600A9A64F /* Nimble.framework in Frameworks */,
+				3FB57F7B1D2996D600A9A64F /* Quick.framework in Frameworks */,
 				3F0340E11D1BC23A002C34BB /* GenericTableViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +168,7 @@
 		3F0340DD1D1BC23A002C34BB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3FB57F7C1D2996E100A9A64F /* Frameworks */,
 				3F0340DE1D1BC23A002C34BB /* DummyTests.swift */,
 				3F0340E01D1BC23A002C34BB /* Info.plist */,
 			);
@@ -173,6 +194,16 @@
 				3F0340CE1D1BC0AF002C34BB /* Info.plist */,
 			);
 			name = "Additional-Files";
+			sourceTree = "<group>";
+		};
+		3FB57F7C1D2996E100A9A64F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB57F781D2996D600A9A64F /* Nimble.framework */,
+				3FB57F791D2996D600A9A64F /* Quick.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +246,7 @@
 				3F0340D81D1BC23A002C34BB /* Sources */,
 				3F0340D91D1BC23A002C34BB /* Frameworks */,
 				3F0340DA1D1BC23A002C34BB /* Resources */,
+				3FB57F7D1D29998600A9A64F /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -542,6 +574,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -591,6 +627,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

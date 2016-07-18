@@ -24,6 +24,7 @@
 		3F03410A1D1C7C4C002C34BB /* GenericTableViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0340B41D1BC056002C34BB /* GenericTableViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F03410F1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */; };
 		3F0341111D1D2950002C34BB /* RowConfiguration+Boxed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */; };
+		3F3DCDD91D3D6A60008C4350 /* GenericTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3DCDD81D3D6A60008C4350 /* GenericTableViewControllerSpec.swift */; };
 		3FB57F7A1D2996D600A9A64F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F781D2996D600A9A64F /* Nimble.framework */; };
 		3FB57F7B1D2996D600A9A64F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F791D2996D600A9A64F /* Quick.framework */; };
 		3FB57F7E1D29999900A9A64F /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB57F781D2996D600A9A64F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -94,6 +95,7 @@
 		3F0341051D1C7A07002C34BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F03410E1D1D28BC002C34BB /* TableViewConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableViewConfiguration+Boxed.swift"; sourceTree = "<group>"; };
 		3F0341101D1D2950002C34BB /* RowConfiguration+Boxed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RowConfiguration+Boxed.swift"; sourceTree = "<group>"; };
+		3F3DCDD81D3D6A60008C4350 /* GenericTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewControllerSpec.swift; sourceTree = "<group>"; };
 		3FB57F781D2996D600A9A64F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		3FB57F791D2996D600A9A64F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 			children = (
 				3FB57F7C1D2996E100A9A64F /* Frameworks */,
 				3F0340DE1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift */,
+				3F3DCDD81D3D6A60008C4350 /* GenericTableViewControllerSpec.swift */,
 				3F0340E01D1BC23A002C34BB /* Info.plist */,
 			);
 			path = Tests;
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3DCDD91D3D6A60008C4350 /* GenericTableViewControllerSpec.swift in Sources */,
 				3F0340DF1D1BC23A002C34BB /* TableViewConfigurationSingleInitSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

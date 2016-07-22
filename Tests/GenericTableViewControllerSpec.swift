@@ -44,6 +44,54 @@ class GenericTableViewControllerSpec: QuickSpec {
       }
     }
 
+    it("uses the RowConfiguration with the identifier returned by identifierForIndex") {
+      let sut = GenericTableViewController()
+      var configuratorCalled = false
+      let expectedIdentifier = "identifier"
+      let rowConfiguration = RowConfiguration<String>(
+        identifier: expectedIdentifier,
+        cellClass: UITableViewCell.self,
+        configurator: { string, cell in
+          configuratorCalled = true
+          return cell
+        }
+      )
+      let otherRowConfiguration = RowConfiguration<String>(
+        identifier: "different-identifier",
+        cellClass: UITableViewCell.self,
+        configurator: { string, cell in
+          fail("This row configuration should not have been called")
+          return cell
+        }
+      )
+      let configuration = TableViewConfiguration<String>(
+        data: ["a"],
+        rowsConfigurations: [rowConfiguration, otherRowConfiguration],
+        identifierForIndex: { index in
+          return expectedIdentifier
+        }
+      )
+      sut.tableViewConfigurator = configuration.boxedToAny()
+
+      expect(configuratorCalled) == false
+
+      // Since we are initializing the view controller outside of the actual
+      // app flow we need to explicitly load the view.
+      sut.loadViewIfNeeded()
+
+      // Since we are initializing the view controller outside of the actual
+      // app flow, and the table view is configured via Auto Layout, we need
+      // to explicitly layout it, so that it' s frame is actually set and
+      // the view controller internal will considere it "alive" and then call
+      // datasource and delegate.
+      sut.tableView.setNeedsLayout()
+      sut.view.layoutIfNeeded()
+
+      sut.tableView.reloadData()
+
+      expect(configuratorCalled).toEventually(beTrue())
+    }
+
     it("calls the RowConfiguration handler function when a cell is selected") {
       waitUntil { done in
         let data = ["a", "b", "c"]

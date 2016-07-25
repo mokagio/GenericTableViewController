@@ -158,6 +158,32 @@ class GenericTableViewControllerSpec: QuickSpec {
 
       expect(dataSource) == sut
     }
+
+    it("sets itself as the delegate of its table view") {
+      let sut = GenericTableViewController()
+      sut.tableViewConfigurator = tableViewConfiguratorFixture()
+
+      // Since we are initializing the view controller outside of the actual
+      // app flow we need to explicitly load the view.
+      sut.loadViewIfNeeded()
+
+      // Since we are initializing the view controller outside of the actual
+      // app flow, and the table view is configured via Auto Layout, we need
+      // to explicitly layout it, so that it' s frame is actually set and
+      // the view controller internal will considere it "alive" and then call
+      // datasource and delegate.
+      sut.tableView.setNeedsLayout()
+      sut.view.layoutIfNeeded()
+
+      sut.tableView.reloadData()
+
+      guard let delegate = sut.tableView.delegate as? GenericTableViewController else {
+        fail("Expected delegate to be an instance of GenericTableViewController")
+        return
+      }
+
+      expect(delegate) == sut
+    }
   }
 }
 

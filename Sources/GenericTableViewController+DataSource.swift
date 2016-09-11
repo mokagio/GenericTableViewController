@@ -2,11 +2,11 @@ import UIKit
 
 extension GenericTableViewController: UITableViewDataSource {
 
-  public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  public func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
 
-  public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure("Attempted to load the table view without providing a configurator")
     }
@@ -15,15 +15,15 @@ extension GenericTableViewController: UITableViewDataSource {
   }
 
   public func tableView(
-    tableView: UITableView,
-    cellForRowAtIndexPath indexPath: NSIndexPath
+    _ tableView: UITableView,
+    cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure("Attempted to load the table view without providing a configurator")
     }
 
     let identifier = configurator.identifierForIndex(indexPath.row)
-    let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
     let value = configurator.data[indexPath.row]
 
     if let configurator = configurator.rowsConfigurations.filter({ $0.identifier == identifier })

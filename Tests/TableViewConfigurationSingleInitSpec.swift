@@ -13,7 +13,7 @@ class TableViewConfigurationSingleInitSpec: QuickSpec {
           identifier: "an-identifier",
           cellClass: UITableViewCell.self,
           configurator: { _, cell in return cell },
-          handler: .None
+          handler: .none
         )
 
         beforeEach {
@@ -25,7 +25,7 @@ class TableViewConfigurationSingleInitSpec: QuickSpec {
         }
 
         it("has an array of row configuratinos containig the given row configuration") {
-          expect(sut.rowsConfigurations.contains({ current -> Bool in
+          expect(sut.rowsConfigurations.contains(where: { current -> Bool in
             // This might not be the best equality check for RowConfiguration,
             // but it seems enough in the context of this test
             return current.identifier == rowConfiguration.identifier

@@ -92,8 +92,8 @@ class GenericTableViewControllerSpec: QuickSpec {
 
         sut.setupViewForTesting()
 
-        let indexPath = NSIndexPath(forRow: 1, inSection: 0)
-        sut.tableView.delegate?.tableView?(sut.tableView, didSelectRowAtIndexPath: indexPath)
+        let indexPath = IndexPath(row: 1, section: 0)
+        sut.tableView.delegate?.tableView?(sut.tableView, didSelectRowAt: indexPath)
       }
     }
 

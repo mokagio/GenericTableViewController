@@ -13,7 +13,7 @@ extension NSLayoutConstraint {
     self.init(
       item: item,
       attribute: attribute,
-      relatedBy: .Equal,
+      relatedBy: .equal,
       toItem: otherItem,
       attribute: attribute,
       multiplier: 1,

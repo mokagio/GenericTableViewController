@@ -1,18 +1,18 @@
 import UIKit
 
-public class GenericTableViewController: UIViewController {
+open class GenericTableViewController: UIViewController {
 
-  public let tableView = UITableView()
+  open let tableView = UITableView()
 
-  public var tableViewConfigurator: TableViewConfiguration<Any>? {
+  open var tableViewConfigurator: TableViewConfiguration<Any>? {
     didSet {
       tableViewConfigurator?.rowsConfigurations.forEach { info in
-        tableView.registerClass(info.cellClass, forCellReuseIdentifier: info.identifier)
+        tableView.register(info.cellClass, forCellReuseIdentifier: info.identifier)
       }
     }
   }
 
-  public override func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
 
     tableView.dataSource = self
@@ -21,7 +21,7 @@ public class GenericTableViewController: UIViewController {
     addTableViewToView()
   }
 
-  private func addTableViewToView() {
+  fileprivate func addTableViewToView() {
     view.addSubview(tableView)
 
     // We disable this because we'll add all the constraints manually
@@ -29,10 +29,10 @@ public class GenericTableViewController: UIViewController {
 
     view.addConstraints(
       [
-        NSLayoutConstraint(equalingAttribute: .Top, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .Right, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .Bottom, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .Left, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .top, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .right, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .bottom, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .left, ofItem: tableView, toItem: view),
       ]
     )
   }

@@ -2,7 +2,7 @@ import UIKit
 
 extension GenericTableViewController: UITableViewDelegate {
 
-  public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let configurator = tableViewConfigurator else {
       preconditionFailure(
         "Attempted to interact with the table view without providing a configurator"
@@ -18,6 +18,6 @@ extension GenericTableViewController: UITableViewDelegate {
       handler(configurator.data[indexPath.row])
     }
 
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

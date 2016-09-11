@@ -9,12 +9,12 @@ public struct RowConfiguration<T> {
 
   public let configurator: (T, UITableViewCell) -> UITableViewCell
 
-  public let selectionHandler: (T -> ())?
+  public let selectionHandler: ((T) -> ())?
 
   public init(identifier: String,
        cellClass: AnyClass = UITableViewCell.self,
-       configurator: (T, UITableViewCell) -> UITableViewCell,
-       handler: (T -> ())? = .None
+       configurator: @escaping (T, UITableViewCell) -> UITableViewCell,
+       handler: ((T) -> ())? = .none
     ) {
     self.identifier = identifier
     self.cellClass = cellClass

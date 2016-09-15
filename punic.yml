@@ -1,0 +1,9 @@
+# Documentation available at https://github.com/schwa/punic#punicyaml-files
+
+defaults:
+  configuration: Debug
+  platform: iOS
+
+skips:
+  # - [ Platform, Dependency name, Xcode project, optional scheme, omit to skip the entire project
+  - [ iOS, Quick, Nimble.xcodeproj ]

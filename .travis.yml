@@ -1,6 +1,11 @@
 language: objective-c
 osx_image: xcode8
 
+install:
+  - brew install libyaml
+  - pip install --upgrade git+https://github.com/schwa/punic.git
+  - punic build
+
 script:
   # Workaround for Simulator getting stuck
   # See: https://github.com/travis-ci/travis-ci/issues/3040#issuecomment-146700203

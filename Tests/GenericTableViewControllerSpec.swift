@@ -7,7 +7,7 @@ class GenericTableViewControllerSpec: QuickSpec {
 
     describe("GenericTableViewController") {
 
-      it("calls RowConfiguration configureCell function when rendering cells") {
+      fit("calls RowConfiguration configureCell function when rendering cells") {
         let sut = GenericTableViewController()
         var configuratorCalled = false
         let rowConfiguration = RowConfiguration<String>(

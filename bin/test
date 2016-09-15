@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+xcodebuild \
+  -project GenericTableViewController.xcodeproj \
+  -scheme GenericTableViewController \
+  -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest' \
+  clean test

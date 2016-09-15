@@ -2,9 +2,13 @@ language: objective-c
 osx_image: xcode8
 
 install:
+  - bundle install
   - brew install libyaml
   - pip install --upgrade git+https://github.com/schwa/punic.git
   - punic build
+
+before_script:
+  - bundle exec danger
 
 script:
   # Workaround for Simulator getting stuck

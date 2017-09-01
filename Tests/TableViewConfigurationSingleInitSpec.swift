@@ -33,7 +33,6 @@ class TableViewConfigurationSingleInitSpec: QuickSpec {
           })).to(beTrue())
         }
 
-        // swiftlint:disable:next line_length
         it("has a ___ function that always returns the identifier from the given row configuration") {
           (0...100).forEach { index in
             expect(sut.identifierForIndex(index)) == rowConfiguration.identifier

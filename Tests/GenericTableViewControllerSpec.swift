@@ -13,7 +13,7 @@ class GenericTableViewControllerSpec: QuickSpec {
         let rowConfiguration = RowConfiguration<String>(
           identifier: "cell",
           cellClass: UITableViewCell.self,
-          configurator: { string, cell in
+          configurator: { _, cell in
             configuratorCalled = true
             return cell
           }
@@ -39,7 +39,7 @@ class GenericTableViewControllerSpec: QuickSpec {
       let rowConfiguration = RowConfiguration<String>(
         identifier: expectedIdentifier,
         cellClass: UITableViewCell.self,
-        configurator: { string, cell in
+        configurator: { _, cell in
           configuratorCalled = true
           return cell
         }
@@ -47,7 +47,7 @@ class GenericTableViewControllerSpec: QuickSpec {
       let otherRowConfiguration = RowConfiguration<String>(
         identifier: "different-identifier",
         cellClass: UITableViewCell.self,
-        configurator: { string, cell in
+        configurator: { _, cell in
           fail("This row configuration should not have been called")
           return cell
         }
@@ -55,7 +55,7 @@ class GenericTableViewControllerSpec: QuickSpec {
       let configuration = TableViewConfiguration<String>(
         data: ["a"],
         rowsConfigurations: [rowConfiguration, otherRowConfiguration],
-        identifierForIndex: { index in
+        identifierForIndex: { _ in
           return expectedIdentifier
         }
       )
@@ -147,7 +147,7 @@ extension GenericTableViewController {
 func tableViewConfiguratorFixture() -> TableViewConfiguration<Any> {
   let rowConfigurator: RowConfiguration<String> = RowConfiguration(
     identifier: "i",
-    configurator: { value, cell in
+    configurator: { _, cell in
       return cell
     }
   )

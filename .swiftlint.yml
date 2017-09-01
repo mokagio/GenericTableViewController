@@ -1,4 +1,4 @@
 disabled_rules:
-  - valid_docs
+  - void_return
 excluded:
   - Carthage

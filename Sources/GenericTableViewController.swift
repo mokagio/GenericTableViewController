@@ -32,7 +32,7 @@ open class GenericTableViewController: UIViewController {
         NSLayoutConstraint(equalingAttribute: .top, ofItem: tableView, toItem: view),
         NSLayoutConstraint(equalingAttribute: .right, ofItem: tableView, toItem: view),
         NSLayoutConstraint(equalingAttribute: .bottom, ofItem: tableView, toItem: view),
-        NSLayoutConstraint(equalingAttribute: .left, ofItem: tableView, toItem: view),
+        NSLayoutConstraint(equalingAttribute: .left, ofItem: tableView, toItem: view)
       ]
     )
   }

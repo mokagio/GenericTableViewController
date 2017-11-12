@@ -1,10 +1,10 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode9.1
 
-install:
-  - brew install libyaml
-  - pip install --upgrade git+https://github.com/schwa/punic.git
-  - punic build
+before_install:
+  - brew update
+  - brew install carthage
+  - carthage bootstrap --platform iOS
 
 script:
   # Workaround for Simulator getting stuck

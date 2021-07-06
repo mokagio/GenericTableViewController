@@ -5,7 +5,7 @@ extension NSLayoutConstraint {
   /// Instantiates an `NSLayoutConstraint` that configures the given `attribute`
   /// as equal for the two given items.
   internal convenience init(
-    equalingAttribute attribute: NSLayoutAttribute,
+    equalingAttribute attribute: NSLayoutConstraint.Attribute,
     ofItem item: UIView,
     toItem otherItem: UIView
   ) {

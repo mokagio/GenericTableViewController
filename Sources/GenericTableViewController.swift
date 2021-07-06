@@ -2,7 +2,7 @@ import UIKit
 
 open class GenericTableViewController: UIViewController {
 
-  open let tableView = UITableView()
+  public let tableView = UITableView()
 
   open var tableViewConfigurator: TableViewConfiguration<Any>? {
     didSet {

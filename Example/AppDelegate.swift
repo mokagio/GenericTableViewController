@@ -7,10 +7,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(
-    application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
-    ) -> Bool {
-    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+  ) -> Bool {
+    window = UIWindow(frame: UIScreen.main.bounds)
 
     let rootTableViewController = GenericTableViewController()
     let navigationController = UINavigationController(rootViewController: rootTableViewController)
@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       rowsConfiguration: rowsConfiguration
     )
 
-    return genericTableViewController(tableViewConfigurator)
+    return genericTableViewController(configuration: tableViewConfigurator)
   }
 
   private func genericTableViewController<T>(

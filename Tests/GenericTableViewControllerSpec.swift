@@ -76,7 +76,7 @@ class GenericTableViewControllerSpec: QuickSpec {
         let rowConfiguration = RowConfiguration<String>(
           identifier: "cell",
           cellClass: UITableViewCell.self,
-          configurator: { string, cell in
+          configurator: { _, cell in
             return cell
           },
           handler: { string in
